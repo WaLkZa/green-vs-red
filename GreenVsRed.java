@@ -3,14 +3,23 @@ import java.util.List;
 
 public class GreenVsRed {
     public static void main(String[] args) {
+        int x, y, turns = 0;
+
         int[][] grid = new int[][] { new int[] { 0, 0, 0 }, new int[] { 1, 1, 1 }, new int[] { 0, 0, 0 } };
 
-        System.out.println(solveGrid(grid, 1, 0, 10));
+        x = 1;
+        y = 0;
+        turns = 10;
+        System.out.println(solveGrid(grid, x, y, turns));
 
         int[][] grid1 = new int[][] { new int[] { 1, 0, 0, 1 }, new int[] { 1, 1, 1, 1 }, new int[] { 0, 1, 0, 0 },
                 new int[] { 1, 0, 1, 0 } };
 
-        System.out.println(solveGrid(grid1, 2, 2, 15));
+        x = 2;
+        y = 2;
+        turns = 15;
+
+        System.out.println(solveGrid(grid1, x, y, turns));
     }
 
     public static int solveGrid(int[][] grid, int x1, int y1, int n) {
